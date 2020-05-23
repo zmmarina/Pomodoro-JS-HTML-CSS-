@@ -26,23 +26,23 @@
         <div class="container">
             <br /><br />
             <div class="row">
-                <div class="col-md-4"></div>
+                <div class="col-md-3"></div>
                 <div class="col-md-4 text-center" style="background:red;">
                 <p style="color:#fff; font-size: 45pt; margin-bottom: 0px;">
                     <span id="timerMinutes">00</span> : 
                     <span id="timerSeconds">00</span>
                 </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <br />
-                    <button id="btnStart" onclick="startChrono();"
-                        style="width: 100%;">Start!</button>
-                    <button id="btnReset" onclick="resetChrono();"
-                        style="width: 100%;">Reset</button>
-                </div>
+                
+                <div class="btn">
+                    <div class="col-md-2 text-center"></div>
+                    <class="btn" class="list-inline margin-bottom: 2px;>
+                        <class="list-inline-item"><a onclick="startChrono();"><i class="fas fa-play"></i></a>
+                        <class="list-inline-item"><a onclick="stopChrono();"><i class="fas fa-pause"></i></a>
+                        <class="list-inline-item"><a onclick="resetChrono();"><i class="fas fa-redo"></i></a>
+                    
+                   
+                </div>  
             </div>
         </div>
     </section>
@@ -66,6 +66,10 @@
             else if(minutes <= 25) { seconds = 0; minutes += 1;}
             else {alert("Time for a break!");}
          }, 1000);
+    }
+
+    function stopChrono(){
+        
     }
 
     function resetChrono(){
