@@ -29,18 +29,18 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-4 text-center" style="background:red;">
                 <p style="color:#fff; font-size: 45pt; margin-bottom: 0px;">
-                    <span id="timerMinutes">00</span> : 
-                    <span id="timerSeconds">00</span>
+                    <span id="counter">00 : 00</span> 
+                    
                 </p>
                 </div>
                 
                 <div class="btn">
                     <div class="col-md-2 text-center"></div>
-                    <class="btn" class="list-inline margin-bottom: 2px;>
-                        <class="list-inline-item"><a onclick="startChrono();"><i class="fas fa-play"></i></a>
-                        <class="list-inline-item"><a onclick="stopChrono();"><i class="fas fa-pause"></i></a>
-                        <class="list-inline-item"><a onclick="resetChrono();"><i class="fas fa-redo"></i></a>
-                    
+                        <class="btn" class="list-inline margin: 10px;">
+                        <class="btn" class="list-inline-item"><a onclick="start();"><i class="fas fa-play"></i></a>
+                        <class="btn" class="list-inline-item"><a onclick="stop();"><i class="fas fa-pause"></i></a>
+                        <class="btn" class="list-inline-item"><a onclick="reset();"><i class="fas fa-redo"></i></a>
+                      
                    
                 </div>  
             </div>
@@ -48,37 +48,7 @@
     </section>
 </main>
 
-<script type="text/javascript">
+<script src="chrono.js"></script>
 
-    const chronoId = 0;
-
-    function startChrono(){
-        const timerMinutes = document.getElementById("timerMinutes");
-        const timerSeconds = document.getElementById("timerSeconds");
-
-        const minutes=0; seconds=0;
-
-        chronoId = setInterval(function() {
-            timerMinutes.innerHTML= minutes<10? "0" + minutes : minutes;
-            timerSeconds.innerHTML= seconds<10? "0" + seconds : seconds;
-
-            if(seconds < 59) { seconds += 1;}
-            else if(minutes <= 25) { seconds = 0; minutes += 1;}
-            else {alert("Time for a break!");}
-         }, 1000);
-    }
-
-    function stopChrono(){
-        
-    }
-
-    function resetChrono(){
-        clearInterval(chronoId)
-        document.getElementById("timerMinutes").innerHTML = "00";
-        document.getElementById("timerSeconds").innerHTML = "00";
-
-    }
-
-</script>
 </body>
 </html>

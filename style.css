@@ -1,3 +1,7 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
 #banner{
     text-align: center;
     background-image: url("image/tomato.jpg");
