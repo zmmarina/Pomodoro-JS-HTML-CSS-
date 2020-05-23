@@ -1,0 +1,26 @@
+#banner{
+    text-align: center;
+    background-image: url("image/tomato.jpg");
+    background-size: cover;
+    padding: 100px;
+    color: white;
+    
+    
+}
+
+#banner h1{
+    font-family: 'Chelsea Market', cursive;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    font-size: 100px;
+    text-shadow: 1px 1px 5px white;
+  }
+
+#banner p{
+    color: lightgoldenrodyellow;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+

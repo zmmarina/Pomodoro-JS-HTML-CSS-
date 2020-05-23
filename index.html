@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pomodoro Chronometer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>  
+<body>
+    <div id="banner">
+        <h1>Use your time wisely!</h1>
+        <p>You will have 25 minutes to put all your attention on an activity</p>
+    </div>
+   
+<main>
+    <section>
+        <div class="container">
+            <br /><br />
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center" style="background:red;">
+                <p style="color:#fff; font-size: 45pt; margin-bottom: 0px;">
+                    <span id="timerMinutes">00</span> : 
+                    <span id="timerSeconds">00</span>
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <br />
+                    <button id="btnStart" onclick="startChrono();"
+                        style="width: 100%;">Start!</button>
+                    <button id="btnReset" onclick="resetChrono();"
+                        style="width: 100%;">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script type="text/javascript">
+
+    const chronoId = 0;
+
+    function startChrono(){
+        const timerMinutes = document.getElementById("timerMinutes");
+        const timerSeconds = document.getElementById("timerSeconds");
+
+        const minutes=0; seconds=0;
+
+        chronoId = setInterval(function() {
+            timerMinutes.innerHTML= minutes<10? "0" + minutes : minutes;
+            timerSeconds.innerHTML= seconds<10? "0" + seconds : seconds;
+
+            if(seconds < 59) { seconds += 1;}
+            else if(minutes <= 25) { seconds = 0; minutes += 1;}
+            else {alert("Time for a break!");}
+         }, 1000);
+    }
+
+    function resetChrono(){
+        clearInterval(chronoId)
+        document.getElementById("timerMinutes").innerHTML = "00";
+        document.getElementById("timerSeconds").innerHTML = "00";
+
+    }
+
+</script>
+</body>
+</html>
