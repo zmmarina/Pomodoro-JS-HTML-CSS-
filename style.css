@@ -1,7 +1,13 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    border: none
 }
+
+body{
+    text-align: center;
+}
+
 #banner{
     text-align: center;
     background-image: url("image/tomato.jpg");
@@ -26,24 +32,52 @@
     font-size: 40px;
 }
 
-
-.btn{
-    padding: 0px;
-    padding-top: 10px;
-    background: white;
-    color: white;
+main{
+    position: relative;  
     text-align: center;
+    margin-top: 20px;
+
 }
 
-.btn a{
-    color: red;
-    font-size: 40px;
-}
-.btn a:hover{
-    color: gray;
+#container{
+    position: absolute;   
    
 }
 
+#counter{
+    background-color: red;
+    color: white;
+    font-size: 80px;   
+    padding: 3px 40px;
+    text-align: center; 
+   
+}
 
+.command{
+    align-items: center;
+    margin-top: 10px;
+}
 
+.command .redo-button{
+   
+}
 
+.command a{
+    color: red;
+    font-size: 40px;     
+}
+
+.command a:hover{
+    color: gray;   
+}
+
+#play-button,
+#stop-button,
+#redo-button{
+    background-color: white;
+}
+
+#play-button,
+#stop-button{
+    margin-right: 20px;
+}

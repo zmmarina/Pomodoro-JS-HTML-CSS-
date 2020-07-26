@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    
 </head>  
 <body>
     <div id="banner">
@@ -22,30 +20,18 @@
     </div>
    
 <main>
-    <section>
-        <div class="container">
-            <br /><br />
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-4 text-center" style="background:red;">
-                <p style="color:#fff; font-size: 45pt; margin-bottom: 0px;">
-                    <span id="counter">00 : 00</span> 
+    <div class="container">
+        
+        <span id="counter">00 : 00</span>                 
                     
-                </p>
-                </div>
-                
-                <div class="btn">
-                    <div class="col-md-2 text-center"></div>
-                        <class="btn" class="list-inline margin: 10px;">
-                        <class="btn" class="list-inline-item"><a onclick="start();"><i class="fas fa-play"></i></a>
-                        <class="btn" class="list-inline-item"><a onclick="stop();"><i class="fas fa-pause"></i></a>
-                        <class="btn" class="list-inline-item"><a onclick="reset();"><i class="fas fa-redo"></i></a>
-                      
-                   
-                </div>  
-            </div>
-        </div>
-    </section>
+        <div class="command">                   
+            <button id="play-button"><a onclick="start();"><i class="fas fa-play"></i></a></button>
+            <button id="stop-button"><a onclick="stop();"><i class="fas fa-pause"></i></a></button>
+            <button id="redo-button"><a onclick="reset();"><i class="fas fa-redo"></i></a></button>              
+        </div>              
+    </div>
+    
+   
 </main>
 
 <script src="chrono.js"></script>
