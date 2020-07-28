@@ -1,19 +1,14 @@
-"use strict"
-
 let minute = 0;
 let second = 0;
-
 let chrono;
 
 function start(){
-    chrono = setInterval(() => {timer();}, 10);
-    
+    chrono = setInterval(() => {timer();}, 10);    
 }
 
 
 function stop(){
     clearInterval(chrono);
-
 }
 
 
@@ -34,7 +29,7 @@ function timer(){
 
         if (minute == 25){
             reset();
-            alert("Great job! Have a rest!");               
+            alert("Great job! Have a rest!");          
                            
         }
     } 

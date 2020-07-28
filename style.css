@@ -68,7 +68,8 @@ main{
 }
 
 .command a:hover{
-    color: gray;   
+    color: gray; 
+    cursor: pointer;  
 }
 
 #play-button,
